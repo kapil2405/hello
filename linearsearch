@@ -1,0 +1,20 @@
+k=list(map(int,input().split()))
+l=list(map(int,input().split()))
+z=l.count(k[1])
+count=0
+
+if z ==1 :
+    for i in range(k[0]):
+        if l[i]==k[1]:
+            print(i+1)
+            break
+elif z >1 :
+    for i in range(z-1):
+        l.remove(k[1])
+        count+=1
+
+    for i in range(len(l)):
+        if l[i]==k[1] :
+            print(i+1+count)
+else:
+    print(-1)
