@@ -1,0 +1,32 @@
+
+
+
+n= int(input())
+
+A = list(map(int, input().split()))
+
+m = int(input())
+
+C = list(map(int, input().split()))
+
+b = []
+
+for i in range(0, n):
+
+        d = [x - A[i] for x in C]
+        b.append(set(d))
+
+
+c_out = b[0]
+
+for i in range(0, len(b) - 1):
+
+    if i == 0:
+
+        c_out = b[i]
+
+    c_out = c_out.intersection(b[i+1])
+
+c_out = sorted(c_out)
+
+[print(c, end = ' ') for c in c_out]
