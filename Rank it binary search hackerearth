@@ -1,0 +1,21 @@
+def bs(arr,l,j,x):
+    if h>=l:
+        mid=(l+j)//2
+        if arr[mid]==x:
+            return mid
+        elif arr[mid] > x :
+            return bs(arr,l,mid-1,x)
+        else:
+            return bs(arr,mid+1,j,x)
+    else:
+        return -1
+h=int(input())
+j=h-1
+arr=list(map(int,input().split()))
+arr.sort()
+l=0
+n=int(input())
+for i in range(n):
+    a=int(input())
+    b=(bs(arr,l,j,a))
+    print(b+1)
