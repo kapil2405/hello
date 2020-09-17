@@ -1,0 +1,17 @@
+k=list(map(int,input().split()))
+p=[]
+for i in range(k[0]):
+    u=[]
+    u=list(map(int,input().split()))
+    
+    p.append(u)
+    
+    
+j=[[p[j][i] for j in range(len(p))] for i in range(len(p[0]))]
+for i in j:
+    for u in i:
+        if i[-1]!=u :
+            print(u,end=" ")
+        else:
+            print(u)
+
